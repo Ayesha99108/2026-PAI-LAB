@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Plant.Soul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #7fb03f 0%, #8dc63f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .login-card {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .login-card h2 {
+            margin: 20px 0;
+            color: #333;
+            font-size: 2rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #666;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            outline: none;
+            font-size: 1rem;
+        }
+        .btn-login {
+            background: #7fb03f;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-login:hover { background: #8dc63f; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <i class="fas fa-leaf" style="font-size: 3rem; color: #7fb03f;"></i>
+        <h2>Welcome Back</h2>
+        <p style="color: #888; margin-bottom: 30px;">Enter your details to access your garden</p>
+        
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn-login">Open My Garden</button>
+        </form>
+        
+        <p style="margin-top: 25px; font-size: 0.9rem; color: #666;">
+            Don't have a garden? <a href="#" style="color: #7fb03f; font-weight: 600; text-decoration: none;">Join now</a>
+        </p>
+    </div>
+</body>
+</html>

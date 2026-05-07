@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Plant.Soul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="logo-section">
+                <i class="fas fa-leaf logo-icon"></i>
+                <span class="logo-text">Plant.Soul</span>
+            </div>
+            <nav class="nav-links">
+                <a href="/" class="nav-btn"><i class="fas fa-home"></i> Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 800px; margin-top: 60px;">
+        <div class="glass-card" style="padding: 50px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Contact AI Maali</h2>
+            <p style="color: #666; margin-bottom: 40px;">Have questions about your garden or need technical support? We're here to help.</p>
+            
+            <form action="#">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #ddd;">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #ddd;">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <label>Message</label>
+                    <textarea placeholder="How can we help your soul bloom?" style="height: 150px;"></textarea>
+                </div>
+                <button type="submit" class="btn-green" style="width: 100%;">Send Message</button>
+            </form>
+            
+            <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; display: flex; justify-content: space-between; color: #888;">
+                <div><i class="fas fa-envelope"></i> support@plant-soul.ai</div>
+                <div><i class="fas fa-map-marker-alt"></i> Digital Forest, Cloud City</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
